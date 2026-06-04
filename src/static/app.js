@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (response.ok) {
         showMessage(result.message, "success");
-        fetchActivities();
+        await fetchActivities();
       } else {
         showMessage(result.detail || "Failed to unregister participant.", "error");
       }
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         showMessage(result.message, "success");
         signupForm.reset();
-        fetchActivities();
+        await fetchActivities();
       } else {
         showMessage(result.detail || "An error occurred", "error");
       }
